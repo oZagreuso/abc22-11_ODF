@@ -27,26 +27,26 @@ public class App {
 		
 		// Début du programme
 		
-		System.out.println("calcul d'intérêt d'une somme");
+		System.out.println("calcul d'interet d'une somme");
 
 		System.out.println("indiquer la somme S");
 		
 		somme = sc.nextDouble();
 		
-		System.out.println("indiquer le nombre d'années N");
+		System.out.println("indiquer le nombre d'annees N");
 		
 		annees = sc.nextDouble();
 		
-		System.out.println("indiquer le taux d'intérêt i");
+		System.out.println("indiquer le taux d'interet i");
 		
 		interet = sc.nextDouble();
 		
 		
-		interetSimple = somme * (1 + annees * interet);
+		interetSimple = somme * (1 + annees * interet / 100d);
 		
-		interetCompose = somme * Math.pow((1 + interet),annees);
+		interetCompose = somme * Math.pow((1 + interet / 100d),annees);
 		
-		System.out.println("le résultat est intérêt simple" + interetSimple  + "le résultat intérêt composé est" + interetCompose);
+		System.out.println("le resultat est interet simple " + interetSimple  + " le resultat interet compose est " + interetCompose);
 				
 			sc.close();	
 			

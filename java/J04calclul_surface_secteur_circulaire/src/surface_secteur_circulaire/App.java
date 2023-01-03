@@ -17,7 +17,7 @@ public class App {
 		// Variables
 		
 		int rayon ;
-		double angle;
+		int angle;
 		double aire;
 		double PI = Math.PI;
 		
@@ -40,6 +40,9 @@ public class App {
 		aire = PI * Math.pow(rayon, 2) * angle / 360; 
 		
 		System.out.println("l'aire du secteur circulaire est" + " " + aire);
+		
+		sc.close();
+		
 		
 		//Fin du programme
 		

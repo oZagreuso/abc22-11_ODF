@@ -35,7 +35,7 @@ public class App {
 		
 		b = temp;
 		
-		System.out.println("le résultat de l'inversion de valeur a est.. " + a  + " le résultat de l'inversion de valeur b est.." + b);
+		System.out.println("le resultat de l'inversion de valeur a est.. " + a  + " le resultat de l'inversion de valeur b est.." + b);
 		
 
 		sc.close();
