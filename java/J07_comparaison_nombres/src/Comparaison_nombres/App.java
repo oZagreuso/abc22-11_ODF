@@ -26,24 +26,24 @@ public class App {
 		
 		System.out.println("comparer les nombres");
 		
-		System.out.println("indiquer l'âge");
+		System.out.println("indiquer l'age");
 		
 		age = sc.nextInt();
 		
 		
 		if (age < 0)
 		{
-			System.out.println("vous n'êtes pas encore née");
+			System.out.println("vous n'etes pas encore nee");
 		}
 		
 		else if (age < 18)
-		{ System.out.println("vous êtes mineur");
+		{ System.out.println("vous etes mineur");
 		
 		}
 		else 
 		
 		{
-			System.out.println("vous êtes majeur");
+			System.out.println("vous etes majeur");
 		}
 		
 		sc.close();
