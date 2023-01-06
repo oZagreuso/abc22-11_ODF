@@ -35,10 +35,10 @@ public class App {
 				p++;
 			}
 		}
-		if (p == 2) {
-			System.out.println(N + " est un nombre premier");
+		if (p == 1) {
+			System.out.println(N + " est un nombre premier ");
 		} else {
-			System.out.println(N + "n'est pas un nombre premier");
+			System.out.println(N + " n'est pas un nombre premier ");
 		
 		}
 		
