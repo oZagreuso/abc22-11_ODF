@@ -21,7 +21,9 @@ public class App {
 		// Déclaration variables		
 		double kiloMeters, miles;
 		// 1 mile = 1.609344 kilomètres => 1 kilomètre = 1/1.609344 miles
-		double conversionFactor = 1.609344;			
+		double conversionFactor = 1.609344;	
+		String quit ="q";
+		boolean fermeture_ptog = false;
 		
 		// Récupérer les données de l'utilisateur via un Scanner class
 		System.out.println(" indiquez une distance comprise entre 0,01 et 1 000 000 km");
@@ -32,9 +34,10 @@ public class App {
 		
 		System.out.println(" la distance en Miles est de : " + miles);
 		
+		while(!fermeture_prog)
 		
-		
-		
+				
+		sc.close();
 		
 		
 
