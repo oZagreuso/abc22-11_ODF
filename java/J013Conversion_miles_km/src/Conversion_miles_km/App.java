@@ -25,6 +25,7 @@ public class App {
 		String quit ="q";
 		boolean fermeture_ptog = false;
 		
+		
 		// Récupérer les données de l'utilisateur via un Scanner class
 		System.out.println(" indiquez une distance comprise entre 0,01 et 1 000 000 km");
 		Scanner input = new Scanner(System.in);
@@ -34,10 +35,9 @@ public class App {
 		
 		System.out.println(" la distance en Miles est de : " + miles);
 		
-		while(!fermeture_prog)
 		
 				
-		sc.close();
+		
 		
 		
 
