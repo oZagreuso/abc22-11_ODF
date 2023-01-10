@@ -43,16 +43,16 @@ public class App {
 		
 		System.out.println(" Veuillez saisir un premier nombre");
 		nombre1 = sc.nextInt(); // appelle l'utilisateur à saisir un nombre entier dans la console
-		System.out.println(" Vous avez saisi: " + nombre1 ");
+		System.out.println(" Vous avez saisi: " + nombre1 );
 		
 		
 		System.out.println(" Veuillez saisir un second nombre" );
 		nombre2 = sc.nextInt(); // appelle l'utilisateur à saisir un nombre entier dans la console
 		System.out.println(" Vous avez saisi: " + nombre2);
 		
-		moyenne = (nombre1 + nombre2 / 2d);
-		
-		System.out.println(moyenne);
+		moyenne = (nombre1 + nombre2) / 2d;
+	
+		System.out.println(" la moyenne des deux nombres est " + moyenne);
 		
 		// FIN PROGRAMME
 		
