@@ -49,7 +49,7 @@ public class App {
 		
 	// Début du programme
 		
-		System.out.println( "calcul taux d'interet simple et taux d'interet compose ");
+		System.out.println( " calcul taux d'interet simple et taux d'interet compose ");
 		System.out.println( " indiquez la somme ");
 		 S = sc.nextInt();
 		System.out.println( " indiquez le taux d'interet ");
@@ -60,7 +60,7 @@ public class App {
 		somme1 = S * ( 1 + N  * i / 100d );
 		somme2= S * (( 1 + i / 100d ) * N);
 		 
-		System.out.println( " le résultat avec un interet simple ets de " + somme1 + " et le résultat d'un interet compose " + somme2 );
+		System.out.println( " le resultat avec un interet simple ets de " + somme1 + " et le resultat d'un interet compose " + somme2 );
 		
 		sc.close();
 		
