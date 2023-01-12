@@ -36,7 +36,7 @@ public class App {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		// Début du programme
+		// Début du programme 2
 		
 		System.out.println( " saisir l'age " );
 		a = sc.nextInt();
