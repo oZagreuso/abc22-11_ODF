@@ -4,38 +4,35 @@ import java.util.Scanner;
 
 public class App {
 	
-	/* Variables
-	 * 
-	 * Somme S est un entier
-	 * Interet i est un entier
-	 * Nombre d'annes N est un entier
-	 * somme1 est un réel double
-	 * somme2 est un réel double
-	 * 
-	 * Début du programme
-	 * 
-	 * Ecrire " veuillez entrer la somme"
-	 * Lire S
-	 * Ecrire " veuillez entrer le taux d'interet "
-	 * Lire i
-	 * Ecrire " veuillez entrer le nombre d'annnee "
-	 * Lire N
-	 * somme1 = S * ( 1 + N * i)
-	 * somme2 = S * ( 1 + i ) * N
-	 * 
-	 * Ecrire " la somme avec un interet simple est de" + somme1 + " et la somme d'un interet compose est de " + somme2
-	 * 
-	 * Fin du programme
-	 */
-	 
-
-	
-	
+/* Declaration des variables
+ * 
+ * Somme S est un entier
+ * Interet i est un entier
+ * Nombre d'annees N est un entier;
+ * somme1 est un double reel
+ * somme 2 est un double reel
+ * 
+ * Début du programme
+ * 
+ * Ecrire " Caclul d'un taux d'interet simple et d'un taux d'interet compose
+ * Ecrire " indiquer la somme "
+ * Lire S
+ * Ecrire " indiquer le taux d'interet "
+ * Lire i
+ * Ecrire " indiquer le nombre d'annee "
+ * Lire N
+ * somme1 = S * ( 1 + N * i )
+ * somme2 = S * ( 1 + i ) * N
+ * Ecrire " le resultat avec un interet simple est de " + somme1 + " et le resultat avec un interet compose est de " + somme2;
+ * 
+ * Fin du programme
+ */
+		
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-	// Déclaration variables
+// Declaration des variables
 		
 		int S;
 		int i;
@@ -43,31 +40,30 @@ public class App {
 		double somme1;
 		double somme2;
 		
-	// Déclaration d'un scanner
+// Declaration d'un scanner
 		
 		Scanner sc = new Scanner(System.in);
 		
-	// Début du programme
+// Debut du programme
 		
-		System.out.println( " calcul taux d'interet simple et taux d'interet compose ");
-		System.out.println( " indiquez la somme ");
-		 S = sc.nextInt();
-		System.out.println( " indiquez le taux d'interet ");
-		 i = sc.nextInt();
-		System.out.println( " indiquez le nombre d'annee N ");
-		 N = sc.nextInt();
-		 
-		somme1 = S * ( 1 + N  * i / 100d );
-		somme2= S * (( 1 + i / 100d ) * N);
-		 
-		System.out.println( " le resultat avec un interet simple ets de " + somme1 + " et le resultat d'un interet compose " + somme2 );
+		System.out.println( " calcul d'un taux d'interet simple et d'un taux d'interet compose " );
+		System.out.println( " indiquez une somme " );
+		S = sc.nextInt();
+		System.out.println( " indiquez le taux d'interet " );
+		i = sc.nextInt();
+		System.out.println( " veuillez indiquer le nombre d'annee " );
+		N = sc.nextInt();
+		
+		somme1 = S * ( 1 + N * i / 100d);
+		somme2 = S * Math.pow(( 1 + i / 100d ), N);
+		
+		System.out.println( " le resultat avec un interet simple est de " + somme1 + " le resultat avec un interet compose est de " + somme2);
 		
 		sc.close();
 		
-		 // Fin du programme;
-	
 		
-		 
+		
+		
 		
 		
 		
