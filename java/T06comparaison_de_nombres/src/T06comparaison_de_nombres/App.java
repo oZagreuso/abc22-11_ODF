@@ -31,8 +31,29 @@ public class App {
 		
 		int a;
 		
+		// Déclarer un scanner
+		
+		Scanner sc = new Scanner(System.in);
+		
+		// Début du programme
+		
+		System.out.println( " Comparaisons de nombres ");
+		System.out.println( " Indiquez l'age ");
+		a = sc.nextInt();
+		
+		if(a<0) {
+			System.out.println( " Vous n'ete pas encore nee ");
 		}
+		else if(a<18) {
+			System.out.println( " vous ete mineur ");
+		}
+		else {
+			System.out.println( " vous ete majeur ");
+		}
+		sc.close();
 	}
+		}
+	
 		
 	
 
