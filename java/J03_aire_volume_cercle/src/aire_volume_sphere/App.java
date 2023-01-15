@@ -8,7 +8,7 @@ public class App {
 		double pi = Math.PI;
 		int rayon;
 		// utilisation de l'ogjet pow(puissance) de la classe math (1er paramètre la variable le nombre,
-		double aire = Math.pow(rayon, 2);
+		
 		
 	}
 }
