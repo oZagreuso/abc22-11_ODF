@@ -1,7 +1,8 @@
 package j011recherchedesdiviseurs;
 
 /*
- * VARIABLES
+ * Variables
+ * 
  * i = entier // itérateur
  * n = entier // saisie de l'utilisateur
  * 
