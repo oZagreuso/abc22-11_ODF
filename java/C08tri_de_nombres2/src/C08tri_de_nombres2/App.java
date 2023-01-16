@@ -25,6 +25,22 @@ public class App {
 	 * 		Sinon // b <= a
 	 * 				Si a < c
 	 * 					Ecrire a , "<" , b
+	 * 				Fin Si
+	 * 		Fin Si
+	 * Sinon // b <= a
+	 * 		Si a < c
+	 * 			Ecrire b , "<" , a , "<" , c
+	 * 		Sinon // c <= a
+	 * 			Si b < c
+	 * 				Ecrire b , "<" , c , "<" , a
+	 * 			Sinon // c <= b
+	 * 				Ecrire c , "<" , b , "<" , a
+	 * 			Fin SI
+	 * 		Fin Si
+	 * Fin SI
+	 * 
+	 * Fin du programme
+	 * 		
 	 */
 
 	public static void main(String[] args) {
