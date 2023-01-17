@@ -46,13 +46,33 @@ public class App {
 		
 		// Début du programme 
 		
-		System.out.println(" saisir un nombre n ";
+		System.out.println(" saisir n ");
 		n = sc.nextInt();
 		
-		n = Math.abs(n); // valeur
+		n = Math.abs(n); // valeur absolue d'un nombre
+		
+		if(n == 0) est_premier = false;
+		
+		for(int i = 2; i <= n - 1 && est_premier; i++) {
+			System.out.println(n + " modulo " + i + " = " + n % i);
+			if(n % i == 0) {
+				est_premier = false;
+			}
+		}
+		
+		if(est_premier) {
+			System.out.println(" n est premier ");
+		}
+		else {
+			System.out.println(" n n'est pas premier ");
+		}
+		
+		sc.close();
+		
+			}
 		
 		
 
 	}
 
-}
+
