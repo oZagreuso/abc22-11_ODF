@@ -57,9 +57,9 @@ import java.util.Scanner;
  * Ecrire " 50 = " + euro50
  * Ecrire " 20 = " + euro20
  * Ecrire " 10 = " + euro10
- * Ecrire " 5 = " + 5
- * Ecrire " 2 = " + 2
- * Ecrire " 1 = " + 1
+ * Ecrire " 5 = " + euro5
+ * Ecrire " 2 = " + euro2
+ * Ecrire " 1 = " + euro1
  * 
  * 
  */
