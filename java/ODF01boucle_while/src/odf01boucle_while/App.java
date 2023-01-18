@@ -20,6 +20,47 @@ import java.util.Scanner;
  * 
  * Début du programme
  * 
+ *  
+ * Tant que nombre < 1
+ * Ecrire " saisir une valeur "
+ * Lire nombre
+ *
+ * 
+ * Faire
+ * 
+ * Si nombre >= 500
+ * 		Alors ajouter 1 à euro500 et réduire nombre de 500
+ * Sinon si nombre >= 200
+ * 		Alors ajouter 1 à euro200 et réduire nombre de 200
+ * Sinon si nombre >= 100
+ * 		Alors ajouter 1 à euro100 et réduire nombre de 100
+ * Sinon si nombre >= 50
+ * 		Alors ajouter 1 à euro50 et réduire nombre de 50
+ * Sinon si nombre >= 20
+ * 		Alors ajouter 1 à euro20 et réduire nombre de 20
+ * Sinon si nombre >= 10 
+ * 		Alors ajouter 1 à euro10 et réduire nombre de 10
+ * Sinon si nombre >= 5
+ * 		Alors ajouter 1 à euro5 et réduire nombre de 5
+ * Sinon si nombre >= 2 
+ * 		Alors ajouter 1 à euro2 et réduire nombre de 2
+ * Sinon si nombre >= 1
+ * 		Alors ajouter 1 à euro1 et réduire nombre de 1
+ * Fin si
+ * 
+ * 
+ * Afficher les résultats
+ * 
+ * Ecrire " 500 = " + euro500
+ * Ecrire " 200 = " + euro200
+ * Ecrire " 100 = " + euro100
+ * Ecrire " 50 = " + euro50
+ * Ecrire " 20 = " + euro20
+ * Ecrire " 10 = " + euro10
+ * Ecrire " 5 = " + 5
+ * Ecrire " 2 = " + 2
+ * Ecrire " 1 = " + 1
+ * 
  * 
  */
 
@@ -29,6 +70,8 @@ public class App {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		// Déclaration des variables
 		
 		int euro500 = 0 ; 
 		int euro200 = 0 ;
@@ -40,8 +83,14 @@ public class App {
 		int euro2 = 0 ;
 		int euro1 = 0 ;
 		
-		Scanner clavier = new Scanner(System.in);
 		int nombre = 0;
+		
+		// Déclaration d'un scanner
+		
+		Scanner clavier = new Scanner(System.in);
+		
+		
+		// Début du programme
 		
 		while ( nombre < 1 ) 
 		{
@@ -95,31 +144,32 @@ public class App {
 						euro1++ ;
 						nombre -= 1;
 				}
+				}
 				while ( nombre > 0 );
 				
 				System.out.println( " 500 E : " +euro500);
 				
-				System.out.println( " 500 E : " +euro200);
+				System.out.println( " 200 E : " +euro200);
 				
-				System.out.println( " 500 E : " +euro100);
+				System.out.println( " 100 E : " +euro100);
 				
-				System.out.println( " 500 E : " +euro50);
+				System.out.println( " 50 E : " +euro50);
 				
-				System.out.println( " 500 E : " +euro20);
+				System.out.println( " 20 E : " +euro20);
 				
-				System.out.println( " 500 E : " +euro10);
+				System.out.println( " 10 E : " +euro10);
 				
-				System.out.println( " 500 E : " +euro5);
+				System.out.println( " 5 E : " +euro5);
 				
-				System.out.println( " 500 E : " +euro2);
+				System.out.println( " 2 E : " +euro2);
 				
-				System.out.println( " 500 E : " +euro1);
+				System.out.println( " 1 E : " +euro1);
 		
 		}
 		
-	}
+	
 		
 
 	}
 
-}
+
