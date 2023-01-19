@@ -1,5 +1,8 @@
 package c13jeu_de_la_fourchette;
 
+import java.util.Scanner;
+import java.util.Random;
+
 /* Variables
  * 
  * nb est un entier genere aleatoirement
@@ -28,7 +31,7 @@ package c13jeu_de_la_fourchette;
  * 					Si nb est inférieur à nbJoueur
  * 						Alors
  * 							Ecrire " C'est moins "
- * 							birneMax = nbJoueur - 1
+ * 							borneMax = nbJoueur - 1
  * 					Fin Si
  * 					Si nb est supérieur à n nbJoueur 
  * 						Alors 
@@ -49,8 +52,49 @@ public class App {
 		
 		// Initialisation des variables
 		
-	
+		Random rand = new Random();
+		int nb;
+		int borneMin;
+		int borneMax;
+		int nbEssais;
+		int nbJoueur;
+		
+		// Déclaration d'un scanner
+		
+		Scanner sc = new Scanner(System.in);
+		
+		// Début du programme
+		
+		nbJoueur = -1;
+		borneMin = 0;
+		borneMax = 100;
+		nbEssais = 1;
+		nb = rand.nextInt(borneMax - borneMin +1) + borneMin;
+		
+		while(nb != nbJoueur)
+		{
+			System.out.println( " Veuillez saisir un nombre entre : " + borneMin + " et " + borneMax);
+			nbJoueur = sc.nextInt();
+			if(nb == nbJoueur)
+			{
+				System.out.println( " Bravo vous avez trouvé en " + nbEssais + " essais ");
+			}
+			if(nb < nbJoueur)
+			{
+				System.out.println( " C'est moins ") ;
+				borneMax = nbJoueur -1;
+			}
+			if(nb > nbJoueur)
+			{
+				System.out.println( " C'est plus " );
+				borneMin = nbJoueur + 1;
+			}
+			nbEssais++;
+			}
+		}
+		
+
 
 	}
 
-}
+
