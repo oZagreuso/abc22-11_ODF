@@ -37,7 +37,7 @@ public class App {
 		
 		for(int j = 50 ; j >= 1 ; j --)
 		{ 
-				System.out.Println(j);
+				System.out.println(j);
 		}
 		
 		// Boucle for de 2 à 50 avec pas de 2
