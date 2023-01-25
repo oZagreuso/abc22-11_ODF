@@ -2,6 +2,7 @@ package C05inversion_deux_valeurs;
 
 import java.util.Scanner;
 
+
 public class App {
 	
 	/* Variables

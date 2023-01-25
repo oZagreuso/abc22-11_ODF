@@ -5,5 +5,5 @@
  * @author ODalferro
  *
  */
-module C01Introduction {
+module Exemple04procedure_fonction01 {
 }
