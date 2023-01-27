@@ -17,7 +17,7 @@ import java.util.Scanner;
  * Ecrire " pourcentage utilisation CB "
  * cheque = b / 20 * 100
  * Ecrire " pourcentage utilisation cheque "
- * virement = c / 20 
+ * virement = c / 20 * 100
  * Ecrire " pourcentage utilisation virement "
  * 
  * FIN FONCTION
@@ -34,7 +34,8 @@ Public double pourcentage(double a, double b, double c)
 	double virement;
 	
 	cb = a / 20 * 100;
-	
+	cheque = b / 20 * 100;
+	virement = c / 20 * 100;
 	
 
 }

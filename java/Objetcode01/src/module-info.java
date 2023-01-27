@@ -5,5 +5,5 @@
  * @author ODalferro
  *
  */
-module CBoucle01 {
+module Objetcode01 {
 }
