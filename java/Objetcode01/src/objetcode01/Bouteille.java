@@ -4,56 +4,101 @@ public class Bouteille {
 
 	// declaration des attributs
 	
-	private double capaciteEnL;
+	private final double capaciteEnL;
 	private double contenanceEnL;
-	private boolean estouverte;
+	private boolean estOuverte;
 	private String nom;
 	
 	// Les méthodes
 	
-	public static boolean ouvrir()
+	public boolean ouvrir()
 	{
-		
+		if (estOuverte = true)
+		{
+			return false;
+		}
+		else
+		{	
+			return true;									
+		}
 	}
-	public static boolean fermer()
+	public boolean fermer()
 	{
-		
+		if (estOuverte = false)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	public static boolean remplirTout()
+	public boolean remplirTout()
 	{
-		
+		if (contenanceEnL <= capaciteEnL)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}		
 	}
-	public static remplir (double quantiteEnL)
+	public boolean remplir (double quantiteEnL)
 	{
-		
+		if (quantiteEnL + contenanceEnL <= capaciteEnL)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	public static boolean vidertout()
+	public boolean vidertout()
 	{
-		
+		if (contenanceEnL > 0)
+		{	
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	public static boolean vider (double quantiteEnL)
+	public boolean vider (double quantiteEnL)
 	{
-		
+		if ( quantiteEnL + contenanceEnL > 0)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-	public static String DonneLeNom()
+	public String DonneLeNom()
 	{
-		
+			return this.nom;
 	}
 	
+	// Constructeur par defaut
 	
-	
-	public static Bouteille Bouteille()
+	public  Bouteille()
 	{
 		capaciteEnL = 1;
 		contenanceEnL = 0;
 		estOuverte = false;
 		nom = " ";
 	}
-	public Bouteille(double _capaciteEnL, double _conteanceEnL, boolea n_estOuverte, String _Nom)
+	
+	// Constructeur classique
+	
+	public Bouteille(double _capaciteEnL, double _contenanceEnL, boolean _estOuverte, String _Nom)
 	{
-		this.capaciteEnl = capaciteEnl;
+		this.capaciteEnL = _capaciteEnL;
 		this.contenanceEnL = _contenanceEnL;
-		this.estouverte = _estOuverte;
+		this.estOuverte = _estOuverte;
 		this.nom = _Nom;
 	}
 }
