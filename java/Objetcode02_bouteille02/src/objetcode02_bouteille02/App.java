@@ -16,7 +16,7 @@ public class App {
 			
 		if ( evian.ouvrir() == false )
 		{
-			System.out.println( " je ne peux ouvrir la bouteille " );
+			System.out.println( " je ne peux pas ouvrir la bouteille " );
 		}
 		else
 			System.out.println( " j'ai réussi à ouvrir la bouteille ");
