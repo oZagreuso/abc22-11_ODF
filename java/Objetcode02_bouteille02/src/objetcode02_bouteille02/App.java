@@ -16,10 +16,10 @@ public class App {
 			
 		if ( evian.ouvrir() == false )
 		{
-			System.out.println( " la bouteille est ouverte " );
+			System.out.println( " je ne peux ouvrir la bouteille " );
 		}
 		else
-			System.out.println( " la bouteille est fermee ");
+			System.out.println( " j'ai réussi à ouvrir la bouteille ");
 		
 		if (evian.remplir() == true )
 		{
