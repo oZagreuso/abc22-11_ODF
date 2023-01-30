@@ -35,7 +35,7 @@ public class Bouteille {
 	}
 	public boolean remplirTout()
 	{
-		if (contenanceEnL <= capaciteEnL)
+		if (contenanceEnL < capaciteEnL)
 		{
 			return true;
 		}
@@ -46,7 +46,7 @@ public class Bouteille {
 	}
 	public boolean remplir (double quantiteEnL)
 	{
-		if (quantiteEnL + contenanceEnL <= capaciteEnL)
+		if (quantiteEnL + contenanceEnL < capaciteEnL)
 		{
 			return true;
 		}
@@ -100,5 +100,7 @@ public class Bouteille {
 		this.contenanceEnL = _contenanceEnL;
 		this.estOuverte = _estOuverte;
 		this.nom = _Nom;
+		
+		
 	}
 }
