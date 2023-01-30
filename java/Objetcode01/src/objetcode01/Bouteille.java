@@ -5,7 +5,7 @@ public class Bouteille {
 	// declaration des attributs
 	
 	private final double capaciteEnL;
-	private double contenanceEnL;
+	private double contenanceEnL;	
 	private boolean estOuverte;
 	private String nom;
 	

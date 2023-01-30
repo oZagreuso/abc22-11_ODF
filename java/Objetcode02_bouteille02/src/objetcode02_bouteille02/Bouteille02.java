@@ -16,7 +16,7 @@ public class Bouteille02 {
 		
 		public boolean ouvrir ()
 		{
-			if ( estOuverte = true )
+			if ( setEstOuverte(true) )
 			{
 				return false;
 			}
@@ -30,7 +30,7 @@ public class Bouteille02 {
 		
 		public boolean fermer ()
 		{
-			if ( estOuverte = true )
+			if ( setEstOuverte(true) )
 			{
 				return true;
 			}
@@ -107,7 +107,7 @@ public class Bouteille02 {
 		{
 			capaciteEnL = 1;
 			contenanceEnL = 0;
-			estOuverte = false;
+			setEstOuverte(false);
 			nom = " " ;
 		}
 		
@@ -117,8 +117,17 @@ public class Bouteille02 {
 		{
 			this.capaciteEnL = _capaciteEnL;
 			this.contenanceEnL = _contenanceEnL;
-			this.estOuverte = _estOuverte;
+			this.setEstOuverte(_estOuverte);
 			this.nom = _nom;
+		}
+
+		public boolean isEstOuverte() {
+			return estOuverte;
+		}
+
+		public boolean setEstOuverte(boolean estOuverte) {
+			this.estOuverte = estOuverte;
+			return estOuverte;
 		}
 		
 		 
