@@ -100,7 +100,20 @@ public class Bouteille02 {
 		{
 			return this.nom;		
 		}
-		 
+		
+		// Override
+		
+		@Override
+		public String toString()
+		{
+			return " capaciteEnL = " + capaciteEnL  
+				   + " contenanceEnL = " + contenanceEnL 
+				   + " estOuverte = " + estOuverte 
+				   + " nom = " + nom;
+				  
+		}
+		
+		
 		// Constructeur par défaut
 		
 		public Bouteille02 ()

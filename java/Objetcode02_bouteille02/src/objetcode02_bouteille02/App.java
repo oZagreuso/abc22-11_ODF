@@ -23,19 +23,19 @@ public class App {
 		
 		if (evian.remplir() == true )
 		{
-			System.out.println( " il faut remplir la bouteille ");
+			System.out.println( " je peux remplir la bouteille ");
 		}
 		else
 		{
-			System.out.println( " la bouteille est deja remplie au maximum ");
+			System.out.println( " il m'est impossible de remplir la bouteille ");
 		}
 		if (evian.vider() == true )
 		{
-			System.out.println( " On peut vider la bouteille ");
+			System.out.println( " je peux vider la bouteille ");
 		}
 		else
 		{
-			System.out.println( " la bouteille est deja vide ");
+			System.out.println( " impossible d'ouvrir la bouteille ");
 		}
 		
 		
