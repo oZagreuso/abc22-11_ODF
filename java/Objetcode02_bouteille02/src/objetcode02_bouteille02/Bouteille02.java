@@ -109,7 +109,7 @@ public class Bouteille02 {
 			return " capaciteEnL = " + capaciteEnL  
 				   + " contenanceEnL = " + contenanceEnL 
 				   + " estOuverte = " + estOuverte 
-				   + " nom = " + nom;
+				   + " nom = " + nom ;
 				  
 		}
 		
