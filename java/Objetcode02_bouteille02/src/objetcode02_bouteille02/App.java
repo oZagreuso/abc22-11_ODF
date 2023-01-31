@@ -38,6 +38,10 @@ public class App {
 			System.out.println( " impossible d'ouvrir la bouteille ");
 		}
 		
+		Bouteille02 evian = new Bouteille();
+		String evian to String = evian to String();
+		System.out.println( evian to String );
+		Boolean ok = evian
 		
 	}		
 		
