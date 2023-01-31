@@ -5,5 +5,5 @@
  * @author ODalferro
  *
  */
-module Objetcode02_bouteille02 {
+module Objet_bouteille {
 }
