@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author ODalferro
- *
- */
-module CBoucleCm {
-}
