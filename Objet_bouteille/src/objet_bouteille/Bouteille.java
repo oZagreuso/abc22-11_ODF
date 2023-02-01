@@ -18,13 +18,13 @@ public class Bouteille {
 			
 			public boolean ouvrir ()
 			{
-				if ( setEstOuverte(true) )
+				if ( setEstOuverte(true) ) // la bouteille est déjà ouverte
 				{
-					return false;
+					return false; // donc comme elle est ouverte on ne peut pas l'ouvrir
 				}
-				else
+				else // Sinon la bouteille est déjà fermée 
 				{
-					return true;
+					return true; // donc comme elle est fermée on peut l'ouvrir
 				}
 			}
 		
@@ -32,13 +32,13 @@ public class Bouteille {
 			
 			public boolean fermer ()
 			{
-				if ( setEstOuverte(true) )
+				if ( setEstOuverte(true) ) // la bouteille est ouverte
 				{
-					return true;
+					return true;  // donc comme elle est ouverte on peut la fermer
 				}
-				else
+				else // Sinon la bouteille est fermée
 				{
-					return false;
+					return false; // donc comme elle est fermée on ne peut pas la fermer
 				}
 			}
 			
@@ -46,13 +46,13 @@ public class Bouteille {
 			
 			 public boolean remplirTout ()
 			{
-				if (contenanceEnL < capaciteEnL)
+				if (contenanceEnL < capaciteEnL) 
 				{
-					return true;
+					return true; // je peux remplir la bouteille
 				}
 				else
 				{
-					return false;
+					return false; // je ne peux pas remplir la bouteille
 				}
 			}
 			 
@@ -62,11 +62,11 @@ public class Bouteille {
 			 {
 				 if (quantiteEnL + contenanceEnL < capaciteEnL)
 				 {
-					 return true;
+					 return true; // je peux remplir la bouteille
 				 }
 				 else
 				 {
-					 return false;
+					 return false; // je ne peux pas remplir la bouteille
 				 }
 			 }
 			// Vider toute la bouteille
@@ -75,11 +75,11 @@ public class Bouteille {
 			{
 				if (contenanceEnL > 0 )
 				{ 
-					return true;
+					return true; // je peux vider la bouteille
 				}
 				else
 				{
-					return false;
+					return false; // je ne peux pas remplir la bouteille
 				}
 			}
 			
@@ -89,18 +89,18 @@ public class Bouteille {
 			{
 				if (quantiteEnL + contenanceEnL > 0 )
 				{
-					return true;
+					return true; // je peux vider la bouteille
 				}
 				else
 				{
-					return false;
+					return false; // je ne peux pas vider la bouteille
 			    }
 			}
 			// Nommer la Bouteille
 			
 			public String nomBouteille()
 			{
-				return this.nom;		
+				return this.nom; // le nom de la bouteille est " "	
 			}
 			
 			// Override
@@ -113,7 +113,7 @@ public class Bouteille {
 					   + " estOuverte = " + estOuverte 
 					   + " nom = " + nom ;
 					  
-			}
+			} 
 			
 			
 			// Constructeur par défaut
