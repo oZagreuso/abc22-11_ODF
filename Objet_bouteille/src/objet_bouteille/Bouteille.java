@@ -1,16 +1,20 @@
 package objet_bouteille;
 
+import java.util.Scanner;
+
 public class Bouteille {
 	
+		// Déclaration d'un scanner
 	
+	Scanner sc = new Scanner(System.in);
 		
 		// Déclaration des attributs
 		
-		private final double capaciteEnL;
-		private double contenanceEnL;
-		private double quantiteEnL;
-		private boolean estOuverte;
-		private String nom; 
+	     private final double capaciteEnL;
+		 private double contenanceEnL;
+		 private double quantiteEnL;
+		 private boolean estOuverte;
+		 private String nom; 
 		
 		// Les méthodes
 		
@@ -18,12 +22,15 @@ public class Bouteille {
 			
 			public boolean ouvrir ()
 			{
-				if ( setEstOuverte(true) ) // la bouteille est déjà ouverte
+				if ( estOuverte == true) // la boutteille est déjà ouverte
 				{
+					System.out.println( " impossible d'ouvrir une bouteille deja ouverte ");
 					return false; // donc comme elle est ouverte on ne peut pas l'ouvrir
 				}
-				else // Sinon la bouteille est déjà fermée 
+				else  // Sinon la bouteille est fermée
 				{
+					estOuverte = false;
+					System.out.println( " j'ouvre la bouteille ");
 					return true; // donc comme elle est fermée on peut l'ouvrir
 				}
 			}
@@ -32,12 +39,15 @@ public class Bouteille {
 			
 			public boolean fermer ()
 			{
-				if ( setEstOuverte(true) ) // la bouteille est ouverte
+				if ( estOuverte == true) // la bouteille est ouverte
 				{
+					System.out.println( " je ferme la bouteille ");
 					return true;  // donc comme elle est ouverte on peut la fermer
 				}
 				else // Sinon la bouteille est fermée
 				{
+					estOuverte = false;
+					System.out.println( " impossible de fermer une bouteille fermee ");
 					return false; // donc comme elle est fermée on ne peut pas la fermer
 				}
 			}
@@ -46,55 +56,113 @@ public class Bouteille {
 			
 			 public boolean remplirTout ()
 			{
-				if (contenanceEnL < capaciteEnL) 
+				if ( estOuverte == true)
 				{
-					return true; // je peux remplir la bouteille
+				
+				
+					if (contenanceEnL < capaciteEnL) 
+					{
+						System.out.println( " la bouteille est remplie a son maximum ");
+						return true; // je peux remplir la bouteille
+						
+					}
+					else
+					{
+						System.out.println( " impossible de remplir la bouteille ");
+						return false; // je ne peux pas remplir la bouteille
+						
+					}
 				}
 				else
 				{
-					return false; // je ne peux pas remplir la bouteille
+					return false;
+				
 				}
-			}
+				}
+				
+					
+				
+		
+			
 			 
 			 // Remplir la bouteille
 			 
 			 public boolean remplir ()
 			 {
-				 if (quantiteEnL + contenanceEnL < capaciteEnL)
-				 {
-					 return true; // je peux remplir la bouteille
+				 if  ( estOuverte == true)
+				 {		
+								 
+					if (quantiteEnL + contenanceEnL < capaciteEnL)
+				 	{
+				 	
+				 		System.out.println(" je remplis la bouteille ");
+						return true; // je peux remplir la bouteille
+				 	}
+				 	else
+				 	{
+				 		System.out.println( " impossible de remplir la bouteille ");
+				 		return false; // je ne peux pas remplir la bouteille
+				 	 }
 				 }
-				 else
-				 {
-					 return false; // je ne peux pas remplir la bouteille
+					else
+					{
+						return false;
+					}
 				 }
-			 }
+			 
+				 
+			 
+				 
+			 
 			// Vider toute la bouteille
 				
 			public boolean viderTout ()
 			{
-				if (contenanceEnL > 0 )
-				{ 
-					return true; // je peux vider la bouteille
-				}
-				else
-				{
-					return false; // je ne peux pas remplir la bouteille
-				}
-			}
+				 if  ( estOuverte == true)
+				 {	
+					
+				 
+					 if (contenanceEnL > 0 )
+					 { 
+						 System.out.println(" je vide entièrement la bouteille ");
+						 
+						 return true; // je peux vider la bouteille
+					 }
+					 else
+					 {
+						 System.out.println(" impossible de vider une bouteille deja vide ");
+						 return false; // je ne peux pas remplir la bouteille
+					 }
+					
+				 }
+				 else 
+				 {
+					 return false;
+				 }
+				 }
 			
 			// Vider la bouteille
 			
 			public boolean vider ()
 			{
-				if (quantiteEnL + contenanceEnL > 0 )
+				if ( estOuverte == true)
 				{
-					return true; // je peux vider la bouteille
+				
+				
+					if (quantiteEnL + contenanceEnL > 0 )
+					{
+						 System.out.println(" je vide la bouteille ");
+						return true; // je peux vider la bouteille
+					}
+					else
+					{
+						return false; // je ne peux pas vider la bouteille
+					}
 				}
 				else
 				{
-					return false; // je ne peux pas vider la bouteille
-			    }
+					return false;
+				}
 			}
 			// Nommer la Bouteille
 			
@@ -121,8 +189,8 @@ public class Bouteille {
 			public Bouteille ()
 			{
 				capaciteEnL = 1;
-				contenanceEnL = 0;
-				setEstOuverte(false);
+				contenanceEnL = 0.5;
+				estOuverte = true;
 				nom = " " ;
 			}
 			
@@ -132,15 +200,16 @@ public class Bouteille {
 			{
 				this.capaciteEnL = _capaciteEnL;
 				this.contenanceEnL = _contenanceEnL;
-				this.setEstOuverte(_estOuverte);
+				this.estOuverte = (_estOuverte);
 				this.nom = _nom;
 			}
 
-			public boolean isEstOuverte() {
+			public boolean estOuverte() {
 				return estOuverte;
 			}
 
-			public boolean setEstOuverte(boolean estOuverte) {
+			public boolean estOuverte(boolean estOuverte) 
+			{
 				this.estOuverte = estOuverte;
 				return estOuverte;
 			}
