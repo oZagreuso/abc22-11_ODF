@@ -22,8 +22,7 @@ public class App {
 		boolean openok = evian.ouvrir();
 		System.out.println(evian.toString());
 
-		boolean openok2 = evian.ouvrir();
-		System.out.println(evian.toString());
+		
 
 		// tester la possibilité de fermer la bouteille d'evian
 
@@ -31,6 +30,9 @@ public class App {
 		System.out.println(evian.toString());
 
 		boolean close2 = evian.fermer();
+		System.out.println(evian.toString());
+		
+		boolean openok2 = evian.ouvrir();
 		System.out.println(evian.toString());
 
 		// tester la possibilité de remplir entièrement la bouteille

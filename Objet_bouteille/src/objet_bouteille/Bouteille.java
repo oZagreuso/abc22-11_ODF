@@ -24,7 +24,7 @@ public class Bouteille {
 		nom = " ";
 	}
 
-	// constructeur classique
+	// Constructeur classique
 
 	public Bouteille(double _capaciteEnL, double _contenanceEnL, boolean _estOuverte, String _nom) {
 		this.capaciteEnL = _capaciteEnL;
