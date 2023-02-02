@@ -6,11 +6,11 @@ public class Bouteille {
 
 	// Déclaration d'un scanner
 
-	Scanner sc = new Scanner(System.in);
+	 
 
 	// Déclaration des attributs
 
-	private final double capaciteEnL;// volume total de la bouteil
+	private final double capaciteEnL;// volume total de la bouteille
 	private double contenanceEnL;// volume de liquide déjà présent dans la bouteille
 	private boolean estOuverte;// état de la bouteille si true alors la bouteille est ouverte
 	private String nom;// appelation de la bouteille
