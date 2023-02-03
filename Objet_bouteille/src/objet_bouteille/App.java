@@ -61,7 +61,7 @@ public class App {
 		
 		// tester la possibilité de vider une partie de la bouteille
 		
-		boolean empty = evian.vider(0);
+		boolean empty = evian.vider(0.3);
 		System.out.println(evian.toString());
 		boolean empty2 = evian.vider(0);
 		System.out.println(evian.toString());

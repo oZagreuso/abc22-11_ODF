@@ -6,7 +6,7 @@ public class Bouteille {
 
 	// Déclaration d'un scanner
 
-	 
+	Scanner sc = new Scanner(System.in);
 
 	// Déclaration des attributs
 
