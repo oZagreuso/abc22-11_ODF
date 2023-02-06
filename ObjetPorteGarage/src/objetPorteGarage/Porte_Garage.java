@@ -10,7 +10,8 @@ public class Porte_Garage {
 
 	// Déclaration des attributs
 
-	private boolean estOuverte;
+	private boolean isOpen;
+	private boolean isHalfOpen;
 	private boolean isLock;
 	private String nom;
 
@@ -18,30 +19,31 @@ public class Porte_Garage {
 
 	public Porte_Garage() {
 
-		estOuverte = true;
+		isOpen = false;
+		isHalfOpen = true;
 		isLock = false;
-		nom = "";
+		nom = " ";
 	}
 
 	// Constructeur classique
 
-	public Porte_Garage(boolean _isLock, boolean _estOuverte, String _nom) {
+	public Porte_Garage(boolean _isLock,boolean _isHalfOpen, boolean _isOpen, String _nom) {
 
 		this.isLock = _isLock;
-		this.estOuverte = _estOuverte;
+		this.isHalfOpen = _isHalfOpen;
+		this.isOpen = _isOpen;
 		this.nom = _nom;
+
 	}
 
 	// Les méthodes
 
-	//
-
 	public boolean lock() {
-		if (estOuverte == true) {
+		if (isOpen == true) {
 			return true;
 			isLock = false;
-		} else 
-		{
+		} 
+		else {
 			return false;
 			isLock = true;
 		}
@@ -50,12 +52,12 @@ public class Porte_Garage {
 	// Ouvrir la porte du garage
 
 	public boolean ouvrir() {
-		if (estOuverte == true) // la porte du garage est déjà ouverte
+		if (isOpen == true) // la porte du garage est déjà ouverte
 		{
 			System.out.println(" impossible d'ouvrir la porte ");
 			return false;
 		} else {
-			estOuverte = true;
+			isOpen = false;
 			System.out.println(" j'ouvre la porte du grarage ");
 			return true;
 		}
@@ -64,20 +66,25 @@ public class Porte_Garage {
 	// Fermer la porte du garage
 
 	public boolean fermer() {
-		if (estOuverte == true) {
-			estOuverte = false;
-			System.out.println(" ouvre porte du garage ");
+		if (isOpen == true) {
+			isOpen = false;
+			System.out.println(" ouverture porte du garage ");
 			return true;
 		} else {
+			isOpen = true;
 			System.out.println(" impossible de fermer la porte du garage ");
 			return false;
 		}
 	}
 
+	// Placer la porte du garage en mode entre ouverte
+	
+	
+	
 	// Nommer la Porte
 
 	public String nomPorte_Garage() {
-		return this.nom; // le nom de la porte de garage est "
+		return this.nom; // le nom de la porte de garage est " ";
 	}
 
 }
