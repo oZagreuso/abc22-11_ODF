@@ -9,9 +9,7 @@ public class GarageDoorB {
 	private final int minimumDegree;
 	private final int maximumDegree;
 	private boolean isLock;
-	private boolean isFullOpen;
-	private boolean isFullCLose;
-	private boolean isPartOpen;
+
 
 	// Constructeur par défaut
 
@@ -21,24 +19,17 @@ public class GarageDoorB {
 		minimumDegree = 0;
 		maximumDegree = 90;
 		isLock = false;
-		isFullOpen = false;
-		isFullClose = true;
-		isPartOpen = false;
 
 	}
 
 	// Constructeur classique
 
-	public GarageDoorB(String _name, int _minimumDegree, int _maximumDegree, boolean _isLock, int _doorPosition,
-			boolean _isFullOpen, boolean _isFullClose, boolean _isPartOpen) {
+	public GarageDoorB(String _name, int _doorPosition, int _minimumDegree, int  _maximumDegree, boolean _isLock) {
 		this.name = _name;
 		this.doorPosition = _doorPosition;
 		this.minimumDegree = _minimumDegree;
 		this.maximumDegree = _maximumDegree;
 		this.isLock = _isLock;
-		this.isFullOpen = _isFullOpen;
-		this.isFullCLose = _isFullClose;
-		this.isPartOpen = _isPartOpen;
 	}
 
 	// Nommer la porte de garage
@@ -48,21 +39,29 @@ public class GarageDoorB {
 	}
 	// Les méthodes
 
-	public void fullOpen() {
+	public boolean fullOpen() {
 		
 		
 		if (doorPosition  == maximumDegree) {
 			
-			isFullOpen = true;
+			return true;
 		}
 		else {
-			isFullOpen = false;
+			return false;
 		}
+	}
+	public boolean fullClose() {
+		
 		if (doorPosition == minimumDegree) {
-			isFullCLose = true;
+			isLock = true;
+			return true;
+			
 		}
 		else {
-			isFullCLose = false;
+			return false;
 		}
 		}
+		
 }
+
+

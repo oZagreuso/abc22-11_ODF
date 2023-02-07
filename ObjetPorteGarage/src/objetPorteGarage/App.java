@@ -1,36 +1,28 @@
 package objetPorteGarage;
 
+
+
 import java.util.Scanner;
 
 import objet_bouteille.Bouteille;
 
 public class App {
+	
+	
+	public static void main(String[] args) {
 
 	// Déclaration d'un scanner
 	
 	Scanner sc = new Scanner(System.in);
 	
+	GarageDoorB doorS = new GarageDoorB("doorS", 0, 0, 90, true );
 
-	Porte_Garage standard = new Porte_Garage(4, 1.10, false, "Evian");
-
-	System.out.println(" une bouteille d'evian ");
-	System.out.println(evian.toString());
+	boolean fullOpen1 = doorS.fullOpen();
+	System.out.println(doorS.toString());
 	
-	boolean openok = evian.ouvrir();
-	System.out.println(evian.toString());
-
+	boolean fullClose1 = doorS.fullClose();
+	System.out.println(doorS.toString());
 	
 
-	// tester la possibilité de fermer la bouteille d'evian
-
-	boolean close = evian.fermer();
-	System.out.println(evian.toString());
-
-	boolean close2 = evian.fermer();
-	System.out.println(evian.toString());
-	
-	boolean openok2 = evian.ouvrir();
-	System.out.println(evian.toString());
-
-	
+}
 }
