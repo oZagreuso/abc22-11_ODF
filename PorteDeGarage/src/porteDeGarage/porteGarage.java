@@ -13,7 +13,7 @@ public class porteGarage {
 
 		// Constructeurs ---------------------------------
 
-		public PorteDeGarage() { // constructeur par défaut
+		public porteGarage() { // constructeur par défaut
 			this.MARQUE = "ABCD";
 			this.degreOuverture = 0;
 			this.DEGREMAX = 90;
@@ -21,7 +21,7 @@ public class porteGarage {
 			this.verrouille = true;
 		}
 
-		public PorteDeGarage(String _marque, int _degreOuverture, int _degreMax, int _degreMin, Boolean _verrouille) { // constructeur
+		public porteGarage(String _marque, int _degreOuverture, int _degreMax, int _degreMin, Boolean _verrouille) { // constructeur
 																														// classique
 
 			this.MARQUE = _marque;
@@ -75,12 +75,20 @@ public class porteGarage {
 			if (
 					!this.verrouille
 					&& this.degreOuverture - degreOuvertureRetire >= this.DEGREMIN) {
-				this.degreOuverture += degreOuvertureRetire;
+				this.degreOuverture -= degreOuvertureRetire;
 				return true;
 			}
 				else {
 					return false;
 				}
+		// Dévérouiller
+			
+		public boolean deverouiller() {
+			if (this verouille == true)
+		}
+			
+			
+			
 		}
 		
 		// to String ------------------------

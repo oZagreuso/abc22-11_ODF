@@ -6,9 +6,9 @@ public class App {
 		
 		
 		
-		PorteDeGarage abcd = new PorteDeGarage(); // déclarer porte par défaut
+		porteGarage abcd = new porteGarage(); // déclarer porte par défaut
 		
-		PorteDeGarage crm = new PorteDeGarage("CRM", 0, 90, 0, false); // Construire une porte
+		porteGarage crm = new porteGarage("CRM", 0, 90, 0, false); // Construire une porte
 		
 		//String printAbcd = abcd.toString(); // afficher état porte par défaut
 		//String printCrm = crm.toString(); // afficher état porte construite
@@ -23,6 +23,8 @@ public class App {
 		//Boolean verrou = crm.verrouiller();
 		
 		// test ouvrir (avec paramètre)
+		
+		
 		Boolean aReussiAOuvrir = crm.ouvrir(45);
 		System.out.println(aReussiAOuvrir); 
 		System.out.println(crm);
