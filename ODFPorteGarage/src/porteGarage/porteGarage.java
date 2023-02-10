@@ -55,11 +55,42 @@ public class porteGarage {
 				return false;
 			}
 		}
-	}
-			
-				
 		
-	}
+		// Ouvrir
+		
+		public boolean ouvrir(int degreOuvertureAjoute) {
+			if (!this.verrouille && degreOuvertureAjoute > 0 && this.degreOuverture + degreOuvertureAjoute <= this.DEGREMAX) {
+				this.degreOuverture += degreOuvertureAjoute; 
+				return true;
+			} else {
+				return false;
+			}
+		}
+			
+		// Fermer
+		
+		public boolean fermer(int degreOuvertureRetire) {
+			if (
+					!this.verrouille && degreOuvertureRetire > 0 && this.degreOuverture - degreOuvertureRetire >= this.DEGREMIN) {
+						this.degreOuverture -= degreOuvertureRetire;
+							return true;
+			}
+			else {
+							return false;
+				}
+		}
+
+			
+		@Override
+			
+			public String toString() {
+				return  " Porte Garage " + this.NOM + " degre d'ouverture " + this.degreOuverture + " degre maximum " + this.DEGREMAX 
+						+ " degre minimum " + this.DEGREMIN + " lock " + this.verrouille;
+			}
+			
+		}
+		
+	
 	
 	
 	
