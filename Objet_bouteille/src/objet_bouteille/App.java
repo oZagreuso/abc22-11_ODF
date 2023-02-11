@@ -12,7 +12,7 @@ public class App {
 
 		// Objet bouteille Evian
 
-		Bouteille evian = new Bouteille(1.25, 1.10, false, "Evian");
+		Bouteille evian = new Bouteille(1, 0.5, true, "Evian");
 
 		System.out.println(" une bouteille d'evian ");
 		System.out.println(evian.toString());
