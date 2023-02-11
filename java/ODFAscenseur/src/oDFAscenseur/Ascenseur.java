@@ -45,10 +45,12 @@ public class Ascenseur {
 	public boolean ouvrir() {
 	if ( bloquerPorte == false && estOuverte == false) {
 		this.estOuverte = true;
+		System.out.println( " ouverture possible ");
 		return true;
 	}
 	else {
 		this.estOuverte = false;
+		System.out.println( " la porte est déjà ouverte ");
 		return false;
 	}
 	}
