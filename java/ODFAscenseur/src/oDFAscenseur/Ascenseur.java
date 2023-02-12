@@ -13,11 +13,10 @@ public class Ascenseur {
 	private String marque;
 	private Boolean estOuverte;
 	private Boolean bloquerPorte;
-	private Boolean upStairs;
 	private final int numeroEtageMax;
 	private final int numeroEtageMin;
 	private int numeroEtage;
-	private int etageSelected;
+	private int etageDestination;
 	
 	// Constructeur par défaut
 	
@@ -25,24 +24,22 @@ public class Ascenseur {
 		this.marque = " ";
 		this.estOuverte = false;
 		this.bloquerPorte = false;	
-		this.upStairs = true;
-		this.numeroEtageMax = 3;
+		this.numeroEtageMax = 4;
 		this.numeroEtageMin = 0;
 		this.numeroEtage = 2;
-		this.etageSelected = 3;
+		this.etageDestination = 3;
 	}
 	
 	// Constructeur classique
 	
-	public Ascenseur( String _marque, boolean _estOuverte, boolean _bloquerPorte, final int _numeroEtageMax, int _numeroEtageMin, int _numeroEtage, int _etageSelected, boolean _upStairs) {
+	public Ascenseur( String _marque, boolean _estOuverte, boolean _bloquerPorte, final int _numeroEtageMax, int _numeroEtageMin, int _numeroEtage, int _etageDestination) {
 		this.marque = _marque;
 		this.estOuverte = _estOuverte;
 		this.bloquerPorte = _bloquerPorte;
-		this.upStairs = _upStairs;
 		this.numeroEtageMax = _numeroEtageMax;
 		this.numeroEtageMin = _numeroEtageMin;
 		this.numeroEtage = _numeroEtage;
-		this.etageSelected = _etageSelected;
+		this.etageDestination = _etageDestination;
 	}
 	
 	// Les fonctions
@@ -82,26 +79,30 @@ public class Ascenseur {
 		 	return numeroEtage;
 	}
 	
-	 // Monter (numéro étagemax - numéro étage + numéro étage choisi)
+	 // Changer d'étage
 	 
-	 public boolean monter() {
-		 if ( numeroEtage >= numeroEtageMin && numeroEtage <= numeroEtageMax) {
-			 System.out.println( " l'ascenseur peut monter ");
-			 upStairs = true;
-			 return true;
-		 }
-		 else {
-			 upStairs = false;
-			 System.out.println( " l'ascenseur ne peut pas monter");
-			 return false;
-		 }
-		 
-	 }
+	public void allerEtage() {
+		if ( this.numeroEtage >= 0 && this.numeroEtage <= 4) {
+			this.etageDestination = this.numeroEtage;
+				while (this.numeroEtage != this.etageDestination) {
+					if (this.numeroEtage < this.etageDestination) {
+						this.numeroEtage++;
+					}
+					else {
+						this.numeroEtage--;
+					}
+				}
+		} else {
+			System.out.println( " Etage Error ");
+					}
+					}
+			
+		}
+	
 	 
 	 
-	 //(numéro étagemax - numéro étage + numéro étage choisi)
 	 
-}
+
 	
 	
 
