@@ -108,9 +108,24 @@ public class Ascenseur {
 		} else {
 			System.out.println( " Etage Error ");
 					}
+	}
+		
+		@Override
+		
+		public String toString() {
+			return " Marque : " + this.marque + "\r\n" 
+								+ " Nombre etage maximum " +  this.numeroEtageMax + "\r\n " + " Nombre etage minimum " + this.numeroEtageMin + "\r\n" 
+								+ " Statut etage " + this.numeroEtage + "\r\n "
+								+ " Destination " + this.etageDestination + "\r\n"
+								+ " Ouverture porte " + this.estOuverte + "\r\n"
+								+ " Porte bloquee " + this.bloquerPorte + "\r\n";
+		
+		
 					}
 			
 		}
+	
+
 	
 	 
 	 
