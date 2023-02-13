@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author odalf
- *
- */
-module ODFAscenseur {
-}
