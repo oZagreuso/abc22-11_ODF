@@ -1,4 +1,4 @@
-package oDFAscenseur;
+package ascenseur;
 
 import java.util.Scanner;
 
@@ -48,7 +48,7 @@ public class Ascenseur {
 	
 	public boolean bloquer() {
 		if (bloquerPorte == true) {
-			bloquerPorte = true;
+			bloquerPorte = false;
 			return true;
 		}
 		else {
@@ -58,7 +58,7 @@ public class Ascenseur {
 			
 		}
 	
-	// Postion porte ouverte ou fermée
+	// Ouvrir la porte 
 	
 	public boolean ouvrir() {
 		if ( bloquerPorte == false && estOuverte == false) {
@@ -73,6 +73,19 @@ public class Ascenseur {
 	}
 	}
 	
+	// Fermer la porte
+	
+	public boolean fermer() {
+		if ( bloquerPorte == false && estOuverte == true) {
+			this.estOuverte = false;
+			return true;
+		}
+		else {
+			return false;
+		}
+		}
+	
+	
 	// Position de l'ascenseur
 	
 	 public int getEtage() {
@@ -82,14 +95,14 @@ public class Ascenseur {
 	 // Changer d'étage
 	 
 	public void allerEtage() {
-		if ( this.numeroEtage >= 0 && this.numeroEtage <= 4) {
-			this.etageDestination = this.numeroEtage;
-				while (this.numeroEtage != this.etageDestination) {
-					if (this.numeroEtage < this.etageDestination) {
-						this.numeroEtage++;
+		if ( this.etageDestination >= numeroEtageMin && this.etageDestination <= numeroEtageMax && this.estOuverte == false ) {
+			this.numeroEtage = this.etageDestination;
+				while (this.etageDestination != this.numeroEtage) {
+					if (this.etageDestination < this.numeroEtage) {
+						this.etageDestination++;
 					}
 					else {
-						this.numeroEtage--;
+						this.etageDestination--;
 					}
 				}
 		} else {
