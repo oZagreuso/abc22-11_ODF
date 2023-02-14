@@ -90,7 +90,9 @@ public class robotAspirateur {
 		}
 		return this.maximumXNb;
 	}
-		
+	// Correspondance entre nombres et lettres pour l'axe horizontal
+	
+	
 }
 	
 	
