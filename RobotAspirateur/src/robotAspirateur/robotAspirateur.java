@@ -92,7 +92,9 @@ public class robotAspirateur {
 	}
 	// Correspondance entre nombres et lettres pour l'axe horizontal
 	
-	
+	public void correspondanceNombresPositionX() {
+		this.uneLettre = this.lettres.chartAt(this.position)
+	}
 }
 	
 	
