@@ -31,7 +31,8 @@ public class robotAspirateur {
 	private int positionXNb;
 	private int positionY;
 	
-	private Boolean allumer;
+	private Boolean isOn;
+	private Boolean scanAlarm;
 	
 	
 	// Constructeurs
@@ -40,22 +41,24 @@ public class robotAspirateur {
 	
 	public robotAspirateur() {
 		this.nomRobot = " Robot Pedro ";
-		this.allumer = true;
+		this.isOn = true;
 		this.maximumX = " E ";
 		this.maximumY = 5 ;
 		this.positionX = " A ";
 		this.positionY = 1;
+		this.scanAlarm = false;
 	}
 	
 	// Robot à construire
 	
-	public robotAspirateur(String _nomRobot, boolean _allumer, String _maximumX, int _maximumY, String _positionX, int _positionY) {
+	public robotAspirateur(String _nomRobot, boolean _isOn, String _maximumX, int _maximumY, String _positionX, int _positionY, boolean _scanAlarm) {
 		this.nomRobot = _nomRobot;
-		this.allumer = _allumer;
+		this.isOn = _isOn;
 		this.maximumX = _maximumX;
 		this.maximumY = _maximumY;
 		this.positionX = _positionX;
 		this.positionY = _positionY;
+		this.scanAlarm = _scanAlarm;
 	}
 		
 	// Régler valeurs
@@ -67,6 +70,8 @@ public class robotAspirateur {
 	public void setPositionY(int _positionY) { // réglage placement vertical
 		this.positionY = _positionY;
 	}
+	
+	// retourner des valeurs
 	
 	// Correspondance entre lettre et nombre pour l'axe horizontal
 	
@@ -93,9 +98,30 @@ public class robotAspirateur {
 	// Correspondance entre nombres et lettres pour l'axe horizontal
 	
 	public void correspondanceNombresPositionX() {
-		this.uneLettre = this.lettres.chartAt(this.position)
+		this.uneLettre = this.lettres.charAt(this.positionXNb);
 	}
+	// Fonctions
+	
+	public boolean allumer() {
+		if (this.isOn == true) {
+			this.isOn = false;
+			return false;
+		}
+			else {
+				return true;
+			}
+		}
+	public boolean stopObstacle() {
+		if (this.scanAlarm == true) {
+			this.scanAlarm = false && this.turnRight = true;
+			
+		}
+	}
+	
 }
+
+	
+
 	
 	
 	
