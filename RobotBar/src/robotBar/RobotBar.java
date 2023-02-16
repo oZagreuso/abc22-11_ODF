@@ -12,7 +12,7 @@ public class RobotBar {
 		
 	private String nom;
 	private Boolean robotOn;		
-	private Boolean remplirVerre;
+	private Boolean verrePlein;
 	private int positionRobot;
 	private final int positionExtremeGauche;
 	private final int positionExtremeDroite;
@@ -23,7 +23,7 @@ public class RobotBar {
 	public RobotBar() { 
 		this.nom = " ";
 		this.robotOn = false;		
-		this.remplirVerre = false;
+		this.verrePlein = false;
 		this.positionRobot = 2;
 		this.positionExtremeGauche = 0;
 		this.positionExtremeDroite = 9;
@@ -33,16 +33,16 @@ public class RobotBar {
 		
 	// Constructeur classique
 		
-	public RobotBar( String _nom, boolean _robotOn, boolean _remplirVerre, int _positionRobot, final int _positionExtremeGauche, final int _positionExtremeDroite,
-		int destinationRobot ) {
+	public RobotBar( String _nom, boolean _robotOn, boolean _verrePlein, int _positionRobot, final int _positionExtremeGauche, final int _positionExtremeDroite,
+		int _destinationRobot ) {
 		
 		this.nom = _nom;
 		this.robotOn = _robotOn;
-		this.remplirVerre = _remplirVerre;
+		this.verrePlein = _verrePlein;
 		this.positionRobot = _positionRobot;
 		this.positionExtremeGauche = _positionExtremeGauche; // position gauche du bar
 		this.positionExtremeDroite = _positionExtremeDroite; // position droite du bar
-		this.destinationRobot = _positionRobot;
+		this.destinationRobot = _destinationRobot;
 						
 	}
 	
@@ -53,19 +53,64 @@ public class RobotBar {
 	public boolean allumer() {
 		if ( this.robotOn == false) {
 			robotOn = true;
-			return true;
+			return true; // allumer le robot
 		}
 		else {
-			return false;
+			return false; // le robot est déjà allumé
 		}
+	}
 		
 	// Déplacement du robot
 		
+	public void deplacer() {
+		if ( this.destinationRobot >= this.positionExtremeGauche && this.destinationRobot <= this.positionExtremeDroite && this.robotOn == true ) {
+			this.positionRobot = this.destinationRobot;
+				while (this.destinationRobot != this.positionRobot) {
+					if (this.destinationRobot < this.positionRobot) {
+						this.destinationRobot++; // déplacement du robot vers la droite
+					}
+					else {
+						this.destinationRobot--; // déplacement du robot vers la gauche
+					}
+				}
+		} else {
+			System.out.println( " Erreur position "); // la position au bar désirée n'existe pas
+		}
+	}
+		
+		// Remplir verre
+			
+	public boolean remplir() {
+			if (this.destinationRobot == this.positionRobot && this.verrePlein == false ) {
+			this.verrePlein = true;
+			return true; // " remplir verre "
+		}
+			else {
+			return false; // " impossible de remplir verre "
+		}
+	}
+		
+	@Override
+	
+	public String toString() {
+		return " Nom : " + this.nom + "\r\n"
+						+ " Robot on " + this.robotOn + "\r\n"
+						+ " Verre plein " + this.verrePlein + "\r\n"
+						+ " Position Robot " + this.positionRobot + "\r\n"
+						+ " Position bar max gauche " + this.positionExtremeGauche + "\r\n"
+						+ " Position bar max droite " + this.positionExtremeDroite + "\r\n"
+						+ " Destination robot " + this.destinationRobot + "\r\n";
+						
+	}			
+	}
+		
 	
 		
-	}
 	
-	}
+		
+	
+
+	
 	
 
 
