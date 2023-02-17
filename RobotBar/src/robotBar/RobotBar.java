@@ -83,10 +83,10 @@ public class RobotBar {
 	public boolean remplir() {
 			if (this.destinationRobot == this.positionRobot && this.verrePlein == false ) {
 			this.verrePlein = true;
-			return true; // " remplir verre "
+			return true; //  remplir verre 
 		}
 			else {
-			return false; // " impossible de remplir verre "
+			return false; //  impossible de remplir verre 
 		}
 	}
 		

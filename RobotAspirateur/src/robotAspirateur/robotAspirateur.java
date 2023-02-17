@@ -111,14 +111,11 @@ public class robotAspirateur {
 				return true;
 			}
 		}
-	public boolean stopObstacle() {
-		if (this.scanAlarm == true) {
-			this.scanAlarm = false && this.turnRight = true;
+	
 			
-		}
 	}
 	
-}
+
 
 	
 
