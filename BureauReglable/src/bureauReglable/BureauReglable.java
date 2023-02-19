@@ -10,12 +10,13 @@ public class BureauReglable {
 	
 	//Attributs
 	
-	private string modelBureau; 
+	private String modelBureau; 
 	private Boolean powerOn;
 	private Boolean boutonMonter;
 	private int positionBureauEnCm;
 	private final int hauteurMaxEnCm;
 	private final int hauteurMinEnCm; 
+
 
 	// Fonctions
 	
@@ -27,23 +28,24 @@ public class BureauReglable {
 			boutonMonter = false;
 			positionBureauEnCm = 75;
 			hauteurMaxEnCm = 150;
-			boutonMinEnCm = 50;
-			
+			hauteurMinEnCm = 50;
+	}
 	// Constructeur classique
 
-	public BureauReglable(String _modelBureau, boolean _powerOn, boolean _boutonMonter, int positionBureauEnCm, final int hauteurMaxEnCm, final int hauteurMinEnCm) {
+	public BureauReglable(String _modelBureau, boolean _powerOn, boolean _boutonMonter, int _positionBureauEnCm, int _hauteurMaxEnCm, int _hauteurMinEnCm) {
 			this.modelBureau = _modelBureau;
 			this.powerOn = _powerOn;
 			this.boutonMonter = _boutonMonter;
 			this.positionBureauEnCm = _positionBureauEnCm;
 			this.hauteurMaxEnCm = _hauteurMaxEnCm;
-			this.hauteurMinEnCm = _heuteurMinEnCm;
+			this.hauteurMinEnCm = _hauteurMinEnCm;
+	}
 			
 	// Nommer le bureau
 
-	public String BureauReglable() {
+	public String bureauModel() {
 			return this.modelBureau; 
-
+	}
 	
 	// Les méthodes
 			
@@ -61,19 +63,22 @@ public class BureauReglable {
 				System.out.println(" le robot est déjà sous tension ");
 				return false;
 			}
-			
+		}
 			// débrancher le bureau
 			
-		public boolean débrancher le bureau() {
+		public boolean débrancher() {
 			
 			if (powerOn == true) {
 				powerOn = false; 
 				return false;
 			}
-	}
-	
+			else {
+				return true;
 			}
-			
+			}
 		}
-	}	
-}
+			
+	
+	
+
+
