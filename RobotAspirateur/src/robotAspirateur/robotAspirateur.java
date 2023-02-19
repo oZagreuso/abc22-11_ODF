@@ -105,6 +105,7 @@ public class robotAspirateur {
 	public boolean allumer() {
 		if (this.isOn == true) {
 			this.isOn = false;
+			System.out.println( " Le robot s'allume ");
 			return false;
 		}
 			else {
