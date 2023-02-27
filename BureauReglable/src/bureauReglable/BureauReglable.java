@@ -13,6 +13,7 @@ public class BureauReglable {
 	private String modelBureau; 
 	private Boolean powerOn;
 	private Boolean boutonMonter;
+	private int destinationPosition;
 	private int positionBureauEnCm;
 	private final int hauteurMaxEnCm;
 	private final int hauteurMinEnCm; 
@@ -26,16 +27,18 @@ public class BureauReglable {
 			modelBureau = " ";
 			powerOn = false;
 			boutonMonter = false;
+			destinationPosition = 120;
 			positionBureauEnCm = 75;
 			hauteurMaxEnCm = 150;
 			hauteurMinEnCm = 50;
 	}
 	// Constructeur classique
 
-	public BureauReglable(String _modelBureau, boolean _powerOn, boolean _boutonMonter, int _positionBureauEnCm, int _hauteurMaxEnCm, int _hauteurMinEnCm) {
+	public BureauReglable(String _modelBureau, boolean _powerOn, boolean _boutonMonter, int _destinationPosition, int _positionBureauEnCm, int _hauteurMaxEnCm, int _hauteurMinEnCm) {
 			this.modelBureau = _modelBureau;
 			this.powerOn = _powerOn;
 			this.boutonMonter = _boutonMonter;
+			this.destinationPosition = _destinationPosition;
 			this.positionBureauEnCm = _positionBureauEnCm;
 			this.hauteurMaxEnCm = _hauteurMaxEnCm;
 			this.hauteurMinEnCm = _hauteurMinEnCm;
@@ -55,18 +58,18 @@ public class BureauReglable {
 		
 			if (powerOn == false) {
 				powerOn = true; // On peut brancher le bureau
-				System.out.printl(" le robot peut être connecté au secteur ");
+				System.out.println(" le robot peut etre connecte au secteur ");
 				return true;
 			}
 			else {
-				// Le bureau est déjà branché
-				System.out.println(" le robot est déjà sous tension ");
+			// Le bureau est déjà branché
+				System.out.println(" le robot est deja sous tension ");
 				return false;
 			}
 		}
 			// débrancher le bureau
 			
-		public boolean débrancher() {
+		public boolean debrancher() {
 			
 			if (powerOn == true) {
 				powerOn = false; 
@@ -76,7 +79,16 @@ public class BureauReglable {
 				return true;
 			}
 			}
+		
+		public void monter() {
+			if (this.powerOn == true && this.positionBureauEnCm <= this.hauteurMaxEnCm && this.positionBureauEnCm >= this.hauteurMinEnCm) {
+				this.positionBureauEnCm = this.destinationPosition;
+					while (this.boutonMonter == true)
+			}
+						
+		
 		}
+}
 			
 	
 	

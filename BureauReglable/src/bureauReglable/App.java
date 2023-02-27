@@ -7,16 +7,18 @@ public class App {
 		
 BureauReglable lambda = new BureauReglable(); // Déclarer un bureau lambda
 		
-BureauReglable adeline = new BureauReglable(" adeline ", false, false, 75, 150, 50); // Construire un objet bureau du nom de Adeline
+BureauReglable sophie = new BureauReglable(" sophie ", false, false, 75, 150, 50); // Construire un objet bureau du nom de Adeline
 
 	
 
-		String model = adeline.bureauModel();
-		System.out.println(adeline.toString());
+		String model = sophie.bureauModel();
+		System.out.println(sophie.toString());
 		
-		boolean allumer1 = adeline.brancher();
-		System.out.println(adeline.toString());
+		boolean allumer1 = sophie.brancher();
+		System.out.println(sophie.toString());
 		
+		boolean éteindre1 = sophie.debrancher();
+		System.out.println(sophie.toString());
 		
 		
 	}
