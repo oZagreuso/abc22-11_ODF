@@ -13,7 +13,7 @@ public class BureauReglable {
 	private String modelBureau; 
 	private Boolean powerOn;
 	private Boolean boutonMonter;
-	private int destinationPosition;
+	private Boolean boutonDescendre;
 	private int positionBureauEnCm;
 	private final int hauteurMaxEnCm;
 	private final int hauteurMinEnCm; 
@@ -27,18 +27,18 @@ public class BureauReglable {
 			modelBureau = " ";
 			powerOn = false;
 			boutonMonter = false;
-			destinationPosition = 120;
+			boutonDescendre = true;
 			positionBureauEnCm = 75;
 			hauteurMaxEnCm = 150;
 			hauteurMinEnCm = 50;
 	}
 	// Constructeur classique
 
-	public BureauReglable(String _modelBureau, boolean _powerOn, boolean _boutonMonter, int _destinationPosition, int _positionBureauEnCm, int _hauteurMaxEnCm, int _hauteurMinEnCm) {
+	public BureauReglable(String _modelBureau, boolean _powerOn, boolean _boutonMonter, boolean _boutonDescendre, int _positionBureauEnCm, int _hauteurMaxEnCm, int _hauteurMinEnCm) {
 			this.modelBureau = _modelBureau;
 			this.powerOn = _powerOn;
 			this.boutonMonter = _boutonMonter;
-			this.destinationPosition = _destinationPosition;
+			this.boutonDescendre = _boutonDescendre;
 			this.positionBureauEnCm = _positionBureauEnCm;
 			this.hauteurMaxEnCm = _hauteurMaxEnCm;
 			this.hauteurMinEnCm = _hauteurMinEnCm;
@@ -58,12 +58,12 @@ public class BureauReglable {
 		
 			if (powerOn == false) {
 				powerOn = true; // On peut brancher le bureau
-				System.out.println(" le robot peut etre connecte au secteur ");
+				System.out.println(" le bureau peut etre connecte au secteur ");
 				return true;
 			}
 			else {
 			// Le bureau est déjà branché
-				System.out.println(" le robot est deja sous tension ");
+				System.out.println(" le bureau est deja sous tension ");
 				return false;
 			}
 		}
@@ -79,16 +79,47 @@ public class BureauReglable {
 				return true;
 			}
 			}
+			
+			// possibilité de monter
+		
+		public boolean monterOk() {
+			if (boutonMonter == false) {
+				boutonMonter = true;
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	
+		
+			// faire monter le bureau
 		
 		public void monter() {
 			if (this.powerOn == true && this.positionBureauEnCm <= this.hauteurMaxEnCm && this.positionBureauEnCm >= this.hauteurMinEnCm) {
-				this.positionBureauEnCm = this.destinationPosition;
-					while (this.boutonMonter == true)
+				
+					while (this.boutonMonter == true) {
+						this.positionBureauEnCm++;
+					}
 			}
-						
+			else {
+				System.out.println( " impossible de faire monter le bureau ");
+			}
+			}
+			
+			// faire descendre le bureau
+		
+		public void descendre() {
+			if (this.powerOn == true && this.positionBureauEnCm <= this.hauteurMaxEnCm && this.positionBureauEnCm >= this.hauteurMinEnCm ) {
+				
+				while (this.boutonDescendre == true) {
+					this.positionBureauEnCm--;
+				}
+			}
+		}
 		
 		}
-}
+
 			
 	
 	
