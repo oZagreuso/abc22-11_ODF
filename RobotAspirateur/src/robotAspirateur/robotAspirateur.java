@@ -75,7 +75,7 @@ public class robotAspirateur {
 		}
 	}
 	
-		// Check déplacement ok
+		// check déplacement ok
 	
 	private boolean deplacement()
 	{
@@ -91,12 +91,52 @@ public class robotAspirateur {
 				this.deplacementOk = true;
 				return true;
 			}
+		
+	}
 		else 
-		{			
-			return false;
+	{			
+		return false;
+	}
+}
+	
+		// déplacement robot
+		
+	public String robotMove(Deplacement move)
+	{
+		String str = "";
+		if(this.deplacementOk)
+		{
+			switch(move)
+			{
+				case AVANT:
+				{
+					str = " bot va tout droit ";
+					break;
+				}
+				case ARRIERE:
+				{
+					str = " bot recule ";
+					break;
+				}
+				case DROITE:
+				{
+					str = " bot va à droite ";
+					break;
+				}
+				case GAUCHE:
+				{
+					str = " bot va a gauche ";
+					break;
+				}
+				default:
+				{
+					break;
+				}
+			}
 		}
+		return str;
 	}
-	}
+	
 }
 
 	
