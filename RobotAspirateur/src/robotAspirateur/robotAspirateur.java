@@ -4,16 +4,17 @@ import java.util.Scanner;
 
 public class robotAspirateur {
 	
-	// Déclaration d'un Scanner
+	// déclaration d'un Scanner
 	
 	Scanner sc = new Scanner(System.in);
 	
 	private String marqueRobot;
 	private Boolean estOn;
 	private Boolean deplacementOk;
+	private Boolean detectAlarm;
 	private Boolean retourBase;
 	
-	// Enumération
+	// enumération
 	
 	public enum Deplacement {
 		AVANT,
@@ -22,7 +23,7 @@ public class robotAspirateur {
 		DROITE;
 	}
 	
-	// Fonctions
+	// fonctions
 	
 		// Marque du robot
 	
@@ -31,7 +32,7 @@ public class robotAspirateur {
 		return this.marqueRobot;
 	}
 	
-		// Allumer le Robot
+		// allumer le Robot
 	
 	public boolean allumerRobot()
 	{
@@ -45,7 +46,7 @@ public class robotAspirateur {
 			return false;
 		}
 	}
-		// Eteindre le robot
+		// eteindre le robot
 	
 	public boolean eteindreRobot()
 	{
@@ -59,7 +60,45 @@ public class robotAspirateur {
 			return false;
 		}
 	}
+		// alarme détecteur On/Off
+	
+	public boolean statutAlarm()
+	{
+		if(this.detectAlarm == false)
+		{
+			this.detectAlarm = true;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
+	
+		// Check déplacement ok
+	
+	private boolean deplacement()
+	{
+		if (this.estOn)
+		{
+			if (this.detectAlarm)
+			{
+				this.deplacementOk = false;
+				return false;
+			}
+			else
+			{
+				this.deplacementOk = true;
+				return true;
+			}
+		else 
+		{			
+			return false;
+		}
+	}
+	}
+}
+
 	
 
 
