@@ -8,112 +8,57 @@ public class robotAspirateur {
 	
 	Scanner sc = new Scanner(System.in);
 	
-	public enum enumRobotAspirateur {
-		
-		allerAgauche, allerAdroite, allerDevant, retourBase, deposerPoussiere;
-		
-	}
-
-	// Attributs
+	private String marqueRobot;
+	private Boolean estOn;
+	private Boolean deplacementOk;
+	private Boolean retourBase;
 	
-	private String lettres = " ABCDEFGHIJKLMNOPQRSTUVWXYZ ";	
-	private char uneLettre;
-	private String nomRobot;
+	// Enumération
 	
-	private String maximumX;
-	private int maximumXNb;
-	private int minimumXNB = 0;
-	
-	private int maximumY;
-	private int minimum = 1;
-	
-	private String positionX;
-	private int positionXNb;
-	private int positionY;
-	
-	private Boolean isOn;
-	private Boolean scanAlarm;
-	
-	
-	// Constructeurs
-	
-	// RobotAspirateur par défaut
-	
-	public robotAspirateur() {
-		this.nomRobot = " Robot Pedro ";
-		this.isOn = true;
-		this.maximumX = " E ";
-		this.maximumY = 5 ;
-		this.positionX = " A ";
-		this.positionY = 1;
-		this.scanAlarm = false;
+	public enum Deplacement {
+		AVANT,
+		ARRIERE,
+		GAUCHE,
+		DROITE;
 	}
 	
-	// Robot à construire
-	
-	public robotAspirateur(String _nomRobot, boolean _isOn, String _maximumX, int _maximumY, String _positionX, int _positionY, boolean _scanAlarm) {
-		this.nomRobot = _nomRobot;
-		this.isOn = _isOn;
-		this.maximumX = _maximumX;
-		this.maximumY = _maximumY;
-		this.positionX = _positionX;
-		this.positionY = _positionY;
-		this.scanAlarm = _scanAlarm;
-	}
-		
-	// Régler valeurs
-		
-	public void setPositionX(String _positionX) { // réglage placement horizontal
-		this.positionX = _positionX;
-	}
-	
-	public void setPositionY(int _positionY) { // réglage placement vertical
-		this.positionY = _positionY;
-	}
-	
-	// retourner des valeurs
-	
-	// Correspondance entre lettre et nombre pour l'axe horizontal
-	
-	public int correspondanceLettrePositionX() {
-		
-		for (int i = 0; i < this.lettres.length(); i++) {
-			if (this.positionX.equals(lettres)) {
-				this.positionXNb = i;
-			
-			}
-			}
-		return this.positionXNb;
-		}
-	
-	public int correspondanceLettresMaximumX() {
-		
-		for (int i = 0; i < this.lettres.length(); i++) {
-			if (this.maximumX.equals(lettres)) {
-				this.maximumXNb = i;
-			}
-		}
-		return this.maximumXNb;
-	}
-	// Correspondance entre nombres et lettres pour l'axe horizontal
-	
-	public void correspondanceNombresPositionX() {
-		this.uneLettre = this.lettres.charAt(this.positionXNb);
-	}
 	// Fonctions
 	
-	public boolean allumer() {
-		if (this.isOn == true) {
-			this.isOn = false;
-			System.out.println( " Le robot s'allume ");
+		// Marque du robot
+	
+	public String getMarque()
+	{
+		return this.marqueRobot;
+	}
+	
+		// Allumer le Robot
+	
+	public boolean allumerRobot()
+	{
+		if(this.estOn == false)
+		{
+			this.estOn = true;
+			return true;
+		}
+		else
+		{
 			return false;
 		}
-			else {
-				return true;
-			}
-		}
+	}
+		// Eteindre le robot
 	
-			
+	public boolean eteindreRobot()
+	{
+		if(this.estOn == true)
+		{
+			this.estOn = false;
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 	}
 	
 
