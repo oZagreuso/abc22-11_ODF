@@ -1,5 +1,6 @@
 package robotAspirateur;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class robotAspirateur {
@@ -12,7 +13,9 @@ public class robotAspirateur {
 	private Boolean estOn;
 	private Boolean deplacementOk;
 	private Boolean detectAlarm;
-	private Boolean retourBase;
+	private int distance;
+	
+	
 	
 	// enumération
 	
@@ -60,20 +63,18 @@ public class robotAspirateur {
 			return false;
 		}
 	}
-		// alarme détecteur On/Off
 	
-	public boolean statutAlarm()
+	// Calcul de la distance (à utiliser pour le détecteur)
+	
+	public int calculerDistance()
 	{
-		if(this.detectAlarm == false)
-		{
-			this.detectAlarm = true;
-			return true;
-		}
-		else
-		{
-			return false;
-		}
+		Random rand = new Random();
+		final int borneMin = 0;
+		final int borneMax = 100;
+		int distance = rand.nextInt(borneMax - borneMin +1) + borneMin;
+		return distance;
 	}
+	
 	
 		// check déplacement ok
 	
@@ -81,7 +82,8 @@ public class robotAspirateur {
 	{
 		if (this.estOn)
 		{
-			if (this.detectAlarm)
+			distance = this.calculerDistance();
+			if (distance < 5)
 			{
 				this.deplacementOk = false;
 				return false;
@@ -104,7 +106,8 @@ public class robotAspirateur {
 	public String robotMove(Deplacement move)
 	{
 		String str = "";
-		if(this.deplacementOk)
+		this.deplacementOk = this.deplacement();
+		if(this.deplacementOk = true  && this.estOn)
 		{
 			switch(move)
 			{
@@ -136,6 +139,16 @@ public class robotAspirateur {
 		}
 		return str;
 	}
+		
+		public robotAspirateur(String _marqueRobot, boolean _estOn, boolean _deplacementOk, boolean _detectAlarm)
+		{
+			this.marqueRobot = _marqueRobot;
+			this.estOn = _estOn;
+			this.deplacementOk = _deplacementOk;
+			this.detectAlarm = _detectAlarm;
+		}
+		
+	
 	
 }
 
