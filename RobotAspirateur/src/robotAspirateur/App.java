@@ -7,7 +7,7 @@ public class App {
 	public static void main(String[] args) {
 
 		Scanner sc = new Scanner(System.in);
-		robotAspirateur Raph = new robotAspirateur("Raph", false, false, false);
+		robotAspirateur Raph = new robotAspirateur("Raph", false, false);
 		
 		String marque = Raph.getMarque();
 		System.out.println(Raph.toString());

@@ -12,7 +12,6 @@ public class robotAspirateur {
 	private String marqueRobot;
 	private Boolean estOn;
 	private Boolean deplacementOk;
-	private Boolean detectAlarm;
 	private int distance;
 	
 	
@@ -140,15 +139,24 @@ public class robotAspirateur {
 		return str;
 	}
 		
-		public robotAspirateur(String _marqueRobot, boolean _estOn, boolean _deplacementOk, boolean _detectAlarm)
+		public robotAspirateur(String _marqueRobot, boolean _estOn, boolean _deplacementOk)
 		{
 			this.marqueRobot = _marqueRobot;
 			this.estOn = _estOn;
 			this.deplacementOk = _deplacementOk;
-			this.detectAlarm = _detectAlarm;
+			
 		}
 		
-	
+	@Override
+		
+		public String toString() {
+			return " Marque : " + this.marqueRobot + "\r\n" 
+								+ this.estOn + "\r\n"
+								+ this.deplacementOk + "\r\n"
+								+ this.distance + "\r\n";
+							
+		
+					}
 	
 }
 
